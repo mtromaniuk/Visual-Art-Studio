@@ -1,0 +1,19 @@
+@import "base/reset";
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/buttons";
+@import "layout/grid.scss";
+@import "layout/layouts.scss";
+@import "layout/header.scss";
+@import "layout/navigation.scss";
+
+@import "pages/startweb";
