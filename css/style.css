@@ -341,6 +341,11 @@ body {
 .welcome_button {
   height: auto; }
 
+.container_window__div {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around; }
+
 .header {
   height: 85vh;
   background-color: whitesmoke; }
@@ -453,8 +458,3 @@ body {
 .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(-135deg); }
-
-.container_window__div {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-around; }
