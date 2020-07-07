@@ -403,7 +403,11 @@ body {
   background-size: 250%;
   transition: all .4s; }
 
+.navigation__link:focus {
+  outline: none; }
+
 .navigation__link:hover, .navigation__link:active {
+  outline: none;
   background-position: 100%;
   color: #111111;
   transform: translateX(1rem); }

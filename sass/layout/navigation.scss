@@ -64,17 +64,20 @@
             background-size: 250%;
             transition: all .4s;
         }
-
+        &:focus {
+            outline: none;
+        }
         &:hover,
         &:active {
+            outline: none;
             background-position: 100%;
             color: $color-black;
             transform: translateX(1rem);
         }
     }
- 
-    
-    //FUNCTIONALITY 
+
+
+    //FUNCTIONALITY
     &__checkbox:checked ~ &__background {
         transform: scale(90);
     }
@@ -85,7 +88,7 @@
     }
 
 
-    // ICON 
+    // ICON
     &__icon {
         position: relative;
         margin-top: 3rem;
