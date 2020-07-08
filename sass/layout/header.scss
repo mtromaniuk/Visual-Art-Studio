@@ -1,4 +1,27 @@
 .header {
     height: 85vh;
+    width: 100%;
     background-color: whitesmoke;
+
+    &__container {
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        position: relative;
+
+        &__logo {
+            display: inline-block;
+            img {
+               float: right;
+            }
+        }
+
+        &__info {
+            height: 1rem;
+            width: 1rem;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

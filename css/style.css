@@ -348,7 +348,23 @@ body {
 
 .header {
   height: 85vh;
+  width: 100%;
   background-color: whitesmoke; }
+  .header__container {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    position: relative; }
+    .header__container__logo {
+      display: inline-block; }
+      .header__container__logo img {
+        float: right; }
+    .header__container__info {
+      height: 1rem;
+      width: 1rem;
+      position: absolute;
+      display: flex;
+      justify-content: center; }
 
 .navigation__checkbox {
   display: none; }
