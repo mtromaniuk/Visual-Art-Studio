@@ -341,10 +341,35 @@ body {
 .welcome_button {
   height: auto; }
 
-.container_window__div {
+.startweb {
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  position: absolute;
+  background-color: #111111;
+  margin: -3rem 0 0 -3rem;
   display: inline-flex;
   align-items: center;
   justify-content: space-around; }
+  .startweb__h2 {
+    position: absolute;
+    top: .5rem;
+    left: 4rem;
+    color: #fff;
+    font-size: 3.2rem;
+    letter-spacing: 5px; }
+  .startweb__container {
+    width: 100%;
+    height: 80vh;
+    background-color: darkgoldenrod;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3.5rem 0; }
+    .startweb__container__window {
+      background-color: green;
+      width: 30rem;
+      height: 30rem; }
 
 .header {
   height: 85vh;
