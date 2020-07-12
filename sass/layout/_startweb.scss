@@ -1,7 +1,7 @@
 .startweb {
     width: 100%;
     height: 100%;
-    z-index: 10000;
+    z-index: 5000;
     position: absolute;
     background-color: $color-black;
     margin: -3rem 0 0 -3rem;
@@ -17,13 +17,22 @@
     &__container {
         width: 100%;
         height: 80vh;
-        background-color: darkgoldenrod;
         @include center-view;
         padding: 3.5rem 0;
+        position: relative;
+        &__video {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            opacity: .8;
+            z-index: 5100;
+        }
         &__window {
-            background-color:green;
-            width: 30rem;
-            height: 30rem;
+            background-color:blue;
+            width: 300px;
+            height: 300px;
+            z-index: 5200;
+            position: absolute;
         }
     }
 }

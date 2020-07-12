@@ -344,7 +344,7 @@ body {
 .startweb {
   width: 100%;
   height: 100%;
-  z-index: 10000;
+  z-index: 5000;
   position: absolute;
   background-color: #111111;
   margin: -3rem 0 0 -3rem;
@@ -361,15 +361,23 @@ body {
   .startweb__container {
     width: 100%;
     height: 80vh;
-    background-color: darkgoldenrod;
     display: inline-flex;
     align-items: center;
     justify-content: space-around;
-    padding: 3.5rem 0; }
+    padding: 3.5rem 0;
+    position: relative; }
+    .startweb__container__video {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      opacity: .8;
+      z-index: 5100; }
     .startweb__container__window {
-      background-color: green;
-      width: 30rem;
-      height: 30rem; }
+      background-color: blue;
+      width: 300px;
+      height: 300px;
+      z-index: 5200;
+      position: absolute; }
 
 .header {
   height: 85vh;
