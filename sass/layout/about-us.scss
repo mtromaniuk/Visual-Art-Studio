@@ -1,0 +1,39 @@
+.about-us {
+    @include wh100;
+    background-color: $color-black;
+    margin: 7rem 0;
+    z-index: 1;
+
+    &__info {
+        @include WH(100%, 80vh);
+        margin: auto auto;
+
+        .info {
+            &__first-person, &__second-person {
+                @include WH(100%, 10rem);
+                margin: 2rem 0;
+                clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+                
+                &__h3 {
+                    color: $color-white;
+                    text-align: center;
+                    padding: .2rem;
+                    z-index: 100;
+                }
+
+                p {
+                    padding: 2rem;
+                }
+            }
+    
+            &__first-person {
+                background-color: darkgray;
+            }
+    
+            &__second-person {
+                background-color: darkkhaki;
+            }
+        }
+    }
+    
+}

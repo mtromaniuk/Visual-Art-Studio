@@ -3,7 +3,7 @@
     z-index: 5000;
     position: fixed;
     background-color: $color-black;
-    margin: -3rem 0 0 -3rem;
+    margin: -3.5rem 0 0 -3rem;
     @include center-view;
     &__h2 {
         position: absolute;
@@ -39,7 +39,7 @@
                     &__button {
                         background-color: transparent;
                         padding: 1rem;
-                        font-size: 1.5rem;
+                        font-size: 1.2rem;
                         color: rgba(#fff,.8);
                         border: solid rgba(#fff,.8) .1rem;
                         border-radius: .2rem;
