@@ -1,39 +1,75 @@
 .about-us {
-    @include wh100;
-    background-color: $color-black;
-    margin: 7rem 0;
-    z-index: 1;
+    @include WH(85%, auto);
+    font-size: 1.2rem;
+    
+    &__h2 {
+        color: $color-white;
+    }
 
     &__info {
-        @include WH(100%, 80vh);
-        margin: auto auto;
+        @include WH(70%, auto);
+        background-color: rgba($color-white, .6);
+        @include center-view-flex;
+        border-radius: .3rem;
+        padding: 6rem;
+        padding-left: 6rem;
+        box-shadow: 0 3rem 6rem rgba($color-black, .1);
+        color: $color-white;
 
         .info {
             &__first-person, &__second-person {
-                @include WH(100%, 10rem);
-                margin: 2rem 0;
-                clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
-                
-                &__h3 {
-                    color: $color-white;
-                    text-align: center;
-                    padding: .2rem;
-                    z-index: 100;
-                }
 
-                p {
-                    padding: 2rem;
-                }
+                .first-person, .second-person {
+                    &__figure {
+                        @include wh(15rem);
+                        @include fig-info;  
+                
+                        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+                            -webkit-clip-path: circle(50% at 50% 50%);
+                            clip-path: circle(50% at 50% 50%);
+                            -webkit-shape-outside: circle(50% at 50% 50%);
+                            shape-outside: circle(50% at 50% 50%);
+                            border-radius: none;
+                        }
+                    }
+
+                    &__text {
+                        margin-top: 3rem;
+                    }
+
+                    &__img {
+                        height: 100%;
+                        transform: translateX(-4rem) scale(1.4);
+                        backface-visibility: hidden;
+                        transition: all .4s;
+                        &:hover {
+                            transform: translateX(-3rem) scale(1);
+                            filter: blur(.3rem) brightness(80%);
+                        } 
+                    }
+
+                    &__caption {
+                        position: absolute;
+                        top: 70%;
+                        left: 12%;
+                        transform: translate(0%, 70%);
+                        text-transform: uppercase;
+                        text-align: center;
+                        opacity: 0;
+                        transition: all .5s;
+                        backface-visibility: hidden; 
+                        &:hover {
+                            opacity: 1;
+                            transform: translate(0%, -50%);
+                        }
+                    }
+                } 
             }
-    
-            &__first-person {
-                background-color: darkgray;
-            }
-    
-            &__second-person {
-                background-color: darkkhaki;
-            }
-        }
+        &:hover {
+            transform: translateX(-3rem) scale(1);
+            filter: blur(.3rem) brightness(80%);
+            opacity: 1;
+        } 
     }
-    
+    }
 }

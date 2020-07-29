@@ -339,13 +339,16 @@ body {
   color: #111111; }
 
 .h1 {
-  font-size: 3.5rem; }
+  font-size: 3.5rem;
+  text-transform: uppercase; }
 
 .h2 {
-  font-size: 2.6rem; }
+  font-size: 2.6rem;
+  text-transform: uppercase; }
 
 .h3 {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  text-transform: uppercase; }
 
 .btn {
   position: absolute;
@@ -354,31 +357,90 @@ body {
   height: auto; }
 
 .about-us {
-  width: 100%;
-  height: 100%;
-  background-color: #111111;
-  margin: 7rem 0;
-  z-index: 1; }
+  width: 85%;
+  height: auto;
+  font-size: 1.2rem; }
+  .about-us__h2 {
+    color: #fff; }
   .about-us__info {
-    width: 100%;
-    height: 80vh;
-    margin: auto auto; }
-    .about-us__info .info__first-person, .about-us__info .info__second-person {
-      width: 100%;
-      height: 10rem;
-      margin: 2rem 0;
-      clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%); }
-      .about-us__info .info__first-person__h3, .about-us__info .info__second-person__h3 {
-        color: #fff;
-        text-align: center;
-        padding: .2rem;
-        z-index: 100; }
-      .about-us__info .info__first-person p, .about-us__info .info__second-person p {
-        padding: 2rem; }
-    .about-us__info .info__first-person {
-      background-color: darkgray; }
-    .about-us__info .info__second-person {
-      background-color: darkkhaki; }
+    width: 70%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: space-around;
+    border-radius: .3rem;
+    padding: 6rem;
+    padding-left: 6rem;
+    box-shadow: 0 3rem 6rem rgba(17, 17, 17, 0.1);
+    color: #fff; }
+    .about-us__info .info__first-person .first-person__figure, .about-us__info .info__first-person .second-person__figure, .about-us__info .info__second-person .first-person__figure, .about-us__info .info__second-person .second-person__figure {
+      width: 15rem;
+      height: 15rem;
+      float: left;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      margin-right: 2.5rem; }
+      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        .about-us__info .info__first-person .first-person__figure, .about-us__info .info__first-person .second-person__figure, .about-us__info .info__second-person .first-person__figure, .about-us__info .info__second-person .second-person__figure {
+          -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+          -webkit-shape-outside: circle(50% at 50% 50%);
+          shape-outside: circle(50% at 50% 50%);
+          border-radius: none; } }
+    .about-us__info .info__first-person .first-person__text, .about-us__info .info__first-person .second-person__text, .about-us__info .info__second-person .first-person__text, .about-us__info .info__second-person .second-person__text {
+      margin-top: 3rem; }
+    .about-us__info .info__first-person .first-person__img, .about-us__info .info__first-person .second-person__img, .about-us__info .info__second-person .first-person__img, .about-us__info .info__second-person .second-person__img {
+      height: 100%;
+      transform: translateX(-4rem) scale(1.4);
+      backface-visibility: hidden;
+      transition: all .4s; }
+      .about-us__info .info__first-person .first-person__img:hover, .about-us__info .info__first-person .second-person__img:hover, .about-us__info .info__second-person .first-person__img:hover, .about-us__info .info__second-person .second-person__img:hover {
+        transform: translateX(-3rem) scale(1);
+        filter: blur(0.3rem) brightness(80%); }
+    .about-us__info .info__first-person .first-person__caption, .about-us__info .info__first-person .second-person__caption, .about-us__info .info__second-person .first-person__caption, .about-us__info .info__second-person .second-person__caption {
+      position: absolute;
+      top: 70%;
+      left: 12%;
+      transform: translate(0%, 70%);
+      text-transform: uppercase;
+      text-align: center;
+      opacity: 0;
+      transition: all .5s;
+      backface-visibility: hidden; }
+      .about-us__info .info__first-person .first-person__caption:hover, .about-us__info .info__first-person .second-person__caption:hover, .about-us__info .info__second-person .first-person__caption:hover, .about-us__info .info__second-person .second-person__caption:hover {
+        opacity: 1;
+        transform: translate(0%, -50%); }
+    .about-us__info .info:hover {
+      transform: translateX(-3rem) scale(1);
+      filter: blur(0.3rem) brightness(80%);
+      opacity: 1; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) /4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .startweb {
   width: 100%;

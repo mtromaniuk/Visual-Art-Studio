@@ -4,6 +4,11 @@
     justify-content: space-around;
 }
 
+@mixin center-view-flex {
+    display: flex;
+    justify-content: space-around;
+}
+
 @mixin wh100 {
     width: 100%;
     height: 100%;
@@ -17,4 +22,20 @@
 @mixin WH($value1, $value2) {
     width: $value1;
     height: $value2;
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin fig-info {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%; 
+    margin-right: 2.5rem; 
 }
