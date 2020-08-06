@@ -1,27 +1,57 @@
 .header {
-    height: 90vh;
-    width: 100%;
-    background-color: whitesmoke;
+    @include WH(100%, 90vh);
 
     &__container {
-        height: 100%;
-        width: 100%;
-        background-color: transparent;
+        @include wh100;
         position: relative;
+        background-color: $color-black;
 
-        &__logo {
-            display: inline-block;
-            img {
-               float: right;
+        .container {
+            &__slideshow {
+                @include wh100;
+                position: absolute;
+                top: 0rem;
+                left: 0rem;
+                opacity: .4;
+
+                .slideshow {
+                    &__slide {
+                        @include wh100;
+                        position: absolute;
+                        background-color: $color-black;
+                        clip-path: polygon(0 1%, 100% 0, 100% 75%, 0% 100%);
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            display: block;  
+                        }
+                    }
+                }
+            }
+
+            &__social-media {
+                @include wh(auto);
+                position: absolute;
+                background-image: linear-gradient($color-black, .7);
+                top: 60%;
+                left: 50%;
+                transform: translate(-40%, 40%);
+                p {
+                    @include center-view;
+                    padding: 1rem;
+                }
+                a {
+                    font-size: 2.5rem;
+                    &:visited {
+                        color: $color-white;
+                        outline: none;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }    
+            }
+                
             }
         }
-
-        &__info {
-            height: 1rem;
-            width: 1rem;
-            position: absolute;
-            display: flex;
-            justify-content: center;
-        }
     }
-}

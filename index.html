@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/css/fontello.css">
 </head>
 <body>
     <section class="startweb">
@@ -18,7 +19,7 @@
                 <source src="./img/coverr-entering-stadium-stairs-1572162291498.mp4" type="video/mp4">
             </video>
             <div class="container__window">
-                <button id="window__button" class="window__button">SPRAWDŹ CO DLA CIEBIE PRZYGOTOWALIŚMY</button>
+                <button id="window__button" class="btn window__button">SPRAWDŹ CO DLA CIEBIE PRZYGOTOWALIŚMY</button>
             </div>
         </div>
     </section>
@@ -45,18 +46,56 @@
 
     <header class="header">
         <div class="header__container">
-            <div class="container__logo">
-                <img src="./img/4570a503-ccdc-4b1e-bdc9-97af6dd5a697_200x200.png">
+            <div class="container__slideshow">
+                <div class="slideshow__slide">
+                    <img src="./img/slideshow/joshua-earle-73TihzG37rk-unsplash.jpg" alt="joshua-earle photo">
+                </div>
+                <div class="slideshow__slide">
+                    <img src="./img/slideshow/nazarizal-mohammad-w43ggOgPX0w-unsplash.jpg" alt="nazarial photo">
+                </div>
             </div>
-            <div class="container__info">
-                <p class="info__p">Fotografia</p>
-                <p class="info__p">Film</p>
-            </div>
-            <div class="container__social_media">
-                Facebook Instagram
+
+            <div class="container__social-media">
+                <p class="social-media__fb"><a href="https://www.facebook.com/profile.php?id=100002485222848" target="blank"><i class="icon-facebook-circled"></i></a></p>
+                <p class="social-media__insta"><a href="https://www.instagram.com/mromaniuk_fotografia/?fbclid=IwAR1CTwSJN0ItKacJIe7c5hvJXysCpU2JPkWkCGqrZJ-t06xW95ekOY71ZV8" target="blank"><i class="icon-instagram"></i></a></p>
             </div>
         </div>
     </header>
+
+    <section class="about-us row">
+        <h2 class="about-us__h2 h2">
+            O nas
+        </h2>
+        <div class="about-us__info  ">
+            <div class="info__personbox">
+                <figure class="personbox__figure">
+                    <img src="img/portrait.jpg" alt="portrait" class="figure__img">
+                    <figcaption class="figure__caption">Michał Romaniuk</figcaption>
+                </figure>
+                <div class="personbox__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan velit turpis, nec porta libero accumsan nec. 
+                        Morbi viverra placerat ligula sed iaculis. 
+                        Aenean sit amet dui eleifend, facilisis lectus vel, viverra dui.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="about-us__info">
+            <div class="info__personbox">
+                <figure class="personbox__figure">
+                    <img src="img/portrait.jpg" alt="photo" class="figure__img">
+                    <figcaption class="figure__caption">Paweł Dawidziuk</figcaption>
+                </figure>
+                <div class="personbox__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan velit turpis, nec porta libero accumsan nec. 
+                        Morbi viverra placerat ligula sed iaculis. 
+                        Aenean sit amet dui eleifend, facilisis lectus vel, viverra dui.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

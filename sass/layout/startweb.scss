@@ -1,0 +1,64 @@
+.startweb {
+    @include wh100;
+    z-index: 5000;
+    position: fixed;
+    background-color: $color-black;
+    margin: -3.5rem 0 0 -3rem;
+    @include center-view;
+    &__h2 {
+        position: absolute;
+        top: .5rem;
+        left: 4rem;
+        color: $color-white;
+        font-size: 3.2rem;
+        letter-spacing: 5px;
+    }
+   
+    &__container {
+        @include wh100;
+        @include center-view;
+        padding: 3.5rem 0;
+        position: relative;
+        .container {
+            &__video {
+                position: fixed;
+                @include wh100;
+                opacity: .3;
+                z-index: 5100;
+            }
+
+            &__window {
+                @include WH(40%, 10%);
+                position: fixed;
+                background-color: transparent;
+                z-index: 5200;
+                position: absolute;
+                border: rgba(#000000,.1);
+                border-radius: .5rem;
+                .window {
+                    &__button {
+                        background-color: transparent;
+                        padding: 1rem;
+                        font-size: 1.2rem;
+                        color: rgba(#fff,.8);
+                        border: solid rgba(#fff,.8) .1rem;
+                        border-radius: .2rem;
+                        max-width: 40rem;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: all .8s;
+                        &:hover {
+                            background-color: rgba(#fff,.8);
+                            border: solid rgba( #000000,.8) .1rem;
+                            color: $color-black;
+                            transition: all .8s;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
