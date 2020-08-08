@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run compile:sass",
     "test": "test",
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },

@@ -351,12 +351,6 @@ body {
   font-size: 1.5rem;
   text-transform: uppercase; }
 
-.btn {
-  position: absolute;
-  margin: 0rem;
-  display: inline-block;
-  height: auto; }
-
 .about-us {
   width: 85%;
   height: auto;
@@ -378,6 +372,12 @@ body {
     box-shadow: 0 3rem 6rem rgba(17, 17, 17, 0.1);
     overflow: hidden;
     transform: translateX(-3rem) skewX(-12deg); }
+    .about-us__info:hover .info__personbox .personbox__figure .figure__img {
+      filter: blur(0.3rem) brightness(80%);
+      transform: translateX(-3rem) scale(1); }
+    .about-us__info:hover .info__personbox .personbox__figure .figure__caption {
+      opacity: 1;
+      transform: translate(-12%, -60%); }
     .about-us__info .info__personbox .personbox__figure {
       width: 15rem;
       height: 15rem;
@@ -410,16 +410,22 @@ body {
         text-align: center;
         opacity: 0;
         transition: all .5s;
-        backface-visibility: hidden; }
+        backface-visibility: hidden;
+        font-size: 2rem; }
     .about-us__info .info__personbox .personbox__text {
       margin: auto auto;
       padding: 2rem; }
-    .about-us__info:hover .figure__img {
-      filter: blur(0.3rem) brightness(80%);
-      transform: translateX(-3rem) scale(1); }
-    .about-us__info:hover .figure__caption {
-      opacity: 1;
-      transform: translate(-50%, -50%); }
+
+.btn {
+  position: absolute;
+  margin: 0rem;
+  display: inline-block;
+  height: auto; }
+
+.offer {
+  background-color: red;
+  width: 100%;
+  height: 10rem; }
 
 .row {
   max-width: 128rem;
